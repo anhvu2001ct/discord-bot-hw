@@ -1,0 +1,27 @@
+{
+  "name": "discord-bot-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node ./build",
+    "dev": "npx tsc && node ./build",
+    "commands": "npx tsc && node ./build/deploy-commands.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.24",
+    "dotenv": "^16.0.0",
+    "prisma": "^3.12.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.13.0",
+    "@prisma/client": "^3.12.0",
+    "discord.js": "^13.6.0"
+  }
+}

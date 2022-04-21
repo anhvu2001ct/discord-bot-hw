@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model author {
+  id       String  @id
+  username String
+  is_bot   Boolean @default(false)
+}
+
+model note {
+  id         Int       @id @default(autoincrement())
+  user_id    String
+  title      String
+  content    String    @db.Text
+  checked    Boolean   @default(false)
+  created_at DateTime  @default(now())
+  updated_at DateTime
+  deleted_at DateTime?
+}
